@@ -41,7 +41,7 @@ sum([GSA]) as GSA,
 sum([VA]) as VA, 
 sum([Civilian]) as Civilian
 from
---subquery here is to categorize the Average rating field based on the criteria below
+--subquery here is to categorize the Average rating field based on the criteria below and assign them a 1 or a 0 to be used as a count
 (select ratingwords as Rating, agency,
 CASE WHEN Average BETWEEN 8.6 AND 10 THEN 1 else 0 end as Exceptional,
 case WHEN Average BETWEEN 7.1 AND 8.5 THEN 1 else 0 end as VeryGood,
